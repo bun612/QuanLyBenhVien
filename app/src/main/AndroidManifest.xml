@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions cần thiết -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        tools:targetApi="31">
+
+        <!-- Login Activity - Activity khởi động đầu tiên -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Signup Activity -->
+        <activity android:name=".SignupActivity" />
+
+        <!-- Các Activity của Bác sĩ -->
+        <activity android:name=".MainBacSiActivity" />
+        <activity android:name=".BacSiLichKhamActivity" />
+        <activity android:name=".BacSiHoSoBenhNhanActivity" />
+        <activity android:name=".BacSiDonThuocActivity" />
+        <activity android:name=".BacSiInfoActivity" />
+
+        <!-- Các Activity của Bệnh nhân -->
+        <activity android:name=".MainBenhNhanActivity" />
+        <activity android:name=".BenhNhanDatLichActivity" />
+        <activity android:name=".BenhNhanLichSuKhamActivity" />
+        <activity android:name=".BenhNhanMyLichKhamActivity" />
+        <activity android:name=".BenhNhanDonThuocActivity" />
+        <activity android:name=".BenhNhanInfoActivity" />
+
+        <!-- Các Activity của Nhân viên -->
+        <activity android:name=".MainNhanVienActivity" />
+        <activity android:name=".AdminQuanLyLichKhamActivity" />
+        <activity android:name=".AdminQuanLyThuocActivity" />
+        <activity android:name=".AdminAddThuocActivity" />
+
+    </application>
+
+</manifest>
